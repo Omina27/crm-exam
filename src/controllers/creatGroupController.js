@@ -21,7 +21,7 @@ const POST = (req, res) => {
 
     write("groups.json", group)
     
-    res.redirect('/creatGroup')
+    res.redirect('https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/creatGroup')
 
 }
 

@@ -12,7 +12,7 @@ const GET = (req, res) => {
     const userVerify = verify(token, "SECRET-KEY")
 
     if (!userVerify) {
-        return res.redirect("/")
+        return res.redirect("https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/")
     }
     const role = userVerify.role
     if (role == "admin") {

@@ -17,7 +17,7 @@ const POST = (req, res) => {
     allStudents.push({id: allStudents[allStudents.length - 1].id + 1, name, surname, age, phoneNumber, courseName, groupName, role: "student"})
     write('users.json', allStudents)
 
-    res.redirect('/creatStudent')
+    res.redirect('https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/creatStudent')
 }
 
 module.exports = {

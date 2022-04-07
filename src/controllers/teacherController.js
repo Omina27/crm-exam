@@ -7,7 +7,7 @@ const GET = (req, res) => {
     const teacherFilter = teacher.name
   
     if (!token) {
-      return res.redirect("/");
+      return res.redirect("https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/");
     } else {
       const verifiedUser = verify(token, "SECRET-KEY");
       const role = verifiedUser.role;
@@ -33,9 +33,9 @@ const GET = (req, res) => {
           groups: foundGroup,  teacherStudents
         })
       } else if (role == "admin") {
-        res.redirect("/admin");
+        res.redirect("https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/admin");
       } else if (role == "student") {
-        res.redirect("/student");
+        res.redirect("https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/student");
       }
     }
   };

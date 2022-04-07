@@ -19,7 +19,7 @@ const POST = (req, res) => {
 
     write("users.json", allTeachers)
     
-    res.redirect('/creatTeacher')
+    res.redirect('https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/creatTeacher')
 
 }
 

@@ -34,9 +34,9 @@ const GET = (req, res) => {
         groups: foundGroup, teacherStudents
       })
     } else if (role == "admin") {
-      res.redirect("/admin");
+      res.redirect("https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/admin");
     } else if (role == "student") {
-      res.redirect("/student");
+      res.redirect("https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/student");
     }
   }
 };
