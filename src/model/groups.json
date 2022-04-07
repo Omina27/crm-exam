@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "groupName": "React-1",
+        "teacher": "Ulug'bek Valiyev",
+        "courseName": "React"
+    },
+    {
+        "id": 2,
+        "groupName": "Node.js-1",
+        "teacher": "Asal Aminboyeva",
+        "courseName": "Node.js"
+    },
+    {
+        "id": 3,
+        "groupName": "Design-1",
+        "teacher": "Bahora",
+        "courseName": "Design"
+    },
+    {
+        "id": 4,
+        "groupName": "Express",
+        "courseName": "Node.js",
+        "teacher": "Mahfuza"
+    },
+    {
+        "id": 5,
+        "groupName": "Jamila",
+        "courseName": "Node.js",
+        "teacher": "Mahfuza"
+    }
+]

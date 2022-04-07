@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Ulug'bek",
+        "surname": "hayitov",
+        "age": 45,
+        "phoneNumber": "778141515751",
+        "role": "student",
+        "courseName": "Node.js",
+        "groupName": "Node.js-1"
+    },
+    {
+        "id": 2,
+        "name": "Asila",
+        "surname": "Ahadova",
+        "age": "19",
+        "phoneNumber": "6675465324",
+        "courseName": "Design",
+        "groupName": "Design-1",
+        "role": "student"
+    },
+    {
+        "id": 3,
+        "name": "Hayat",
+        "surname": "Hakimova",
+        "age": "19",
+        "phoneNumber": "6759597880987",
+        "courseName": "Design",
+        "groupName": "Design-1",
+        "role": "student"
+    },
+    {
+        "id": 4,
+        "name": "Hayat",
+        "surname": "Farhodov",
+        "password": "0101",
+        "role": "teacher",
+        "phoneNumber": "01010105",
+        "courseName": "Node.js"
+    },
+    {
+        "id": 5,
+        "name": "Fotima",
+        "surname": "Ochilova",
+        "password": "04568",
+        "role": "teacher",
+        "phoneNumber": "676544694",
+        "courseName": "React"
+    },
+    {
+        "id": 6,
+        "name": "Hayat",
+        "surname": "Rahimova",
+        "password": "5989",
+        "role": "teacher",
+        "phoneNumber": "987978",
+        "courseName": "Design"
+    },
+    {
+        "id": 7,
+        "name": "Omina",
+        "password": "1010",
+        "role": "admin"
+    },
+    {
+        "id": 8,
+        "name": "Mahfuza",
+        "surname": "Inomova",
+        "password": "1212",
+        "role": "teacher",
+        "phoneNumber": "3456587965",
+        "courseName": "Node.js"
+    }
+]

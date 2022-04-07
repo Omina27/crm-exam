@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/crtCourse.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <ul class="navbar">
+                
+                <a href="https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/creatCourse" class="navLink">
+                    <li class="navbar__item">
+                        Courses
+                    </li>
+                </a>
+                
+                <a href="https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/creatTeacher" class="navLink">
+                    <li class="navbar__item">
+                        Teachers
+                    </li>
+                </a>
+                
+                <a href="https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/creatGroup" class="navLink">
+                    <li class="navbar__item">
+                        Groups
+                    </li>
+                </a>
+                <a href="https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/creatStudent" class="navLink">
+                    <li class="navbar__item">
+                        Students
+                    </li>
+                </a>
+            </ul>
+            
+            <div class="center">
+                <div class="center__header">
+                    <h2 class="heading">Groups</h2>
+                    <button type="submit" class="addbtn" id="addBtn">Add groups</button>
+                    <div id="modal" class="modal">
+                        <div class="modal__content">
+                          <span class="close">x</span>
+                          <h3 class="modal__title">Add groups</h3>
+                          <form action="/creatGroup" class="form" enctype="application/x-www-form-urlencoded" method="POST">
+                            <input class="input" type="text" name="groupName" placeholder="Group name" required>
+
+                            <div class="input_wrapper">
+                                <label for="courseName">Course name:</label>
+                                <select name="courseName" id="courseNameSelectGroup" required>
+                                    <% allCourses.map ( e => { %> 
+                                        <option selected  value=<%=e.courseName%>><%= e.courseName%></option>
+                                    <% }) %> 
+                                </select>
+                            </div>
+            
+                            <div class="input_wrapper">
+                                <label for="teacher">Teacher:</label>
+                                <select name="teacher" id="courseNameSelectTeacher" required>
+                                </select>
+                            </div>
+                            <button class="addBtn" type="submit">Submit</button>
+                        </form>
+                        </div>
+                      </div>
+                </div>
+
+                
+                <div class="groups">
+                    <% for(let i of allGroups){ %>
+                        <div class="groups__item">
+                            <h5 class="groups__name">Group name: <%= i.groupName %></h5>
+                            <h5 class="groups__courseName">Course name: <%= i.courseName %></h5>
+                            <h5 class="groups__teacher">Teacher: <%= i.teacher %></h5>
+                        </div>
+                    <% } %>
+                </div>
+
+
+            </div>
+
+
+           
+
+            
+        </div> <!--end of wrapper-->
+    </div><!--end of container-->
+
+    <script src="../public/js/group.js"></script>
+</body>
+</html>

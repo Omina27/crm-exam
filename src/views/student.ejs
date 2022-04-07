@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/crtCourse.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="wrapper">
+            <ul class="navbar">
+                
+                <a href="https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/teacher" class="navLink">
+                    <li class="navbar__item">
+                        Groups
+                    </li>
+                </a>
+                <a href="https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/student" class="navLink">
+                    <li class="navbar__item">
+                        Students
+                    </li>
+                </a>
+            </ul>
+           
+            <div class="center">
+                 
+                <div class="center__header">
+                    <h2 class="heading">Students</h2>
+               </div>
+                
+
+                <div class="students">
+                    <% for(let i of allStudents){ %>
+                        <div class="courses__item">
+                            <h5 class="courses__name">Course name: <%= i.name %></h5>
+                            <p class="courses__text">Group name: <%= i.groupName %> </p>
+                            <p class="courses__text">Teacher name: <%= i.name %> </p>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+           
+        </div> <!--end of wrapper-->
+    </div><!--end of container-->
+</body>
+</html>

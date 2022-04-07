@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/css/crtCourse.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        
+        <div class="wrapper">
+            <ul class="navbar">
+                
+                <a href="https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/creatCourse" class="navLink">
+                    <li class="navbar__item">
+                        Courses
+                    </li>
+                </a>
+                
+                <a href="https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/creatTeacher" class="navLink">
+                    <li class="navbar__item">
+                        Teachers
+                    </li>
+                </a>
+                
+                <a href="https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/creatGroup" class="navLink">
+                    <li class="navbar__item">
+                        Groups
+                    </li>
+                </a>
+                <a href="https://dashboard.heroku.com/apps/crm-exam-app/deploy/github/creatStudent" class="navLink">
+                    <li class="navbar__item">
+                        Students
+                    </li>
+                </a>
+            </ul>
+           
+            <div class="center">
+                 
+                <div class="center__header">
+                    <h2 class="heading">Courses</h2>
+                    <button type="submit" class="addbtn" id="addBtn">Add course</button>
+                    <div id="modal" class="modal">
+                        <div class="modal__content">
+                            <span class="close">x</span>
+                            <h3 class="modal__title">Add course</h3>
+                            <form action="/creatCourse" enctype="application/x-www-form-urlencoded" method="POST" class="form">
+                                <input class="input" type="text" name="courseName" placeholder="Course name" required>
+                                <input class="input" type="text" name="desc" placeholder="Description" required>
+                                <button class="addBtn" type="submit">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+               </div>
+                <div class="courses">
+                    <% for(let i of allCourses){ %>
+                        <div class="courses__item">
+                            <h5 class="courses__name"><%= i.courseName %></h5>
+                            <p class="courses__text"><%= i.desc %> </p>
+                        </div>
+                    <% } %>
+                </div>
+            </div>
+           
+        </div> <!--end of wrapper-->
+    </div><!--end of container-->
+    <script src="../public/js/index.js"></script>
+</body>
+</html>
